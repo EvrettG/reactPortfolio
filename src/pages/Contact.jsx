@@ -13,30 +13,46 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle form submission, e.g., send an email
     console.log('Form submitted', formState);
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h1>Contact Me</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" name="name" value={formState.name} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input type="email" name="email" value={formState.email} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Message:
-          <textarea name="message" value={formState.message} onChange={handleChange} />
-        </label>
-        <br />
-        <button type="submit">Send</button>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formState.name}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formState.email}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            value={formState.message}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+        <button type="submit" className="submit-button">Send</button>
       </form>
     </div>
   );
