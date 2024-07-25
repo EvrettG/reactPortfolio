@@ -13,7 +13,22 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formState.email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Check if all fields are filled
+    if (!formState.name || !formState.email || !formState.message) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+
     console.log('Form submitted', formState);
+    // Here you can handle form submission, e.g., send an email
   };
 
   return (

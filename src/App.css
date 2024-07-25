@@ -1,10 +1,28 @@
-body{
-  background-color: #f0f0f0; /* Light-grey background */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #819595;
+}
+
+.content {
+  flex: 1; /* Takes up available space */
+}
+
+.footer {
+  background-color: #363946; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  text-align: center;
+}
 /* styles for the nav bar begin */
 nav {
-  background-color: #333; /* Change the background color */
+  background-color: #363946; /* Change the background color */
   padding: 15px 20px; /* Increase padding for more space around the content */
   height: 60px; /* Set a fixed height for the nav area */
   display: flex; /* Use flexbox to position child elements */
@@ -39,40 +57,53 @@ nav li a:hover {
   text-decoration: underline;
 }
 /* Navbar end */
+
 /* Style for  resume beging*/
-.resume-container {
-  
+.resume-page {
+  background-color: #99A69E; /* Light grey background */
   padding: 20px;
+  text-align: center; /* Center text */
 }
 
-.resume-container h1, .resume-container h3 {
+.resume-page h1 {
+  margin-bottom: 20px;
+}
+
+.lists-container {
+  display: flex;
+  justify-content: center; /* Center the lists horizontally */
+  gap: 20px; /* Space between the lists */
+  flex-wrap: wrap; /* Wrap lists if the screen is too narrow */
+}
+
+.list-section {
+  color: white;
+  background-color: #757E84; /* White background for each section */
+  border: 1px solid #363946;
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  width: 250px; /* Fixed width for each list section */
+}
+
+.list-section h3 {
   margin-top: 0;
 }
 
-.resume-container ul {
-  list-style-type: none;
-  padding: 0;
+.list-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
 }
 
-.skills-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping if there isn't enough space */
-  justify-content: space-between; /* Distribute space between the lists */
-}
-
-.skills-section ul {
-  width: 30%; /* Adjust width as needed */
-  margin: 0 10px; /* Space between lists */
-}
-
-.skills-section li {
-  margin-bottom: 10px;
+.list-section li {
+  margin-bottom: 5px; /* Space between list items */
 }
 /* Resume End */
 
 /* About begins */
 .about-container {
-  background-color: #f0f0f0; /* Light grey background */
+  background-color: #99A69E; /* Light grey background */
   padding: 20px;
   margin: 20px;
   border-radius: 8px; /* Rounded corners */
@@ -96,11 +127,27 @@ nav li a:hover {
 .about-container p:last-of-type {
   margin-bottom: 0;
 }
+
+.avatar-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the avatar */
+  align-items: center; /* Vertically center the avatar (if container has height) */
+  padding: 20px; /* Optional: Add padding around the container */
+}
+
+.avatar-image {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Ensure it's a square */
+  /* border-radius: 50%; */
+  /* Make it a circle */
+  margin-top: 20px; /* Space above the avatar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
 /* About ends */
 
 /* Contact begins */
 .contact-container {
-  background-color: #f9f9f9; /* Light grey background */
+  background-color: #99A69E; /* Light grey background */
   padding: 30px;
   margin: 20px;
   border-radius: 8px; /* Rounded corners */
@@ -157,8 +204,12 @@ nav li a:hover {
 /* Contact Ends */
 
 /* Portfolio begins */
+.project a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Optional: Inherit color from parent */
+}
 .portfolio-container {
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: #99A69E; /* Light grey background */
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
@@ -182,7 +233,7 @@ nav li a:hover {
 }
 
 .project {
-  background-color: #fff;
+  background-color: #B1B6A6;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
   margin-bottom: 20px;
@@ -212,3 +263,27 @@ nav li a:hover {
   color: #555;
 }
 /* Portfolio ends */
+
+/* Footer begins */
+.footer {
+  background-color: #363946; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+}
+
+.footer-icon {
+  color: #fff; /* Icon color */
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+/* Footer ends */

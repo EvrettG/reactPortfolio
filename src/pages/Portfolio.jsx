@@ -32,6 +32,20 @@ function Portfolio() {
           <p>Implemented and deployed a server backend for managing orders, stock, and other e-commerce functionalities.</p>
         </div>
         <div className="project">
+          <a href="https://github.com/EvrettG/dogFactsBlog">
+          <h2>E-Commerce Backend</h2>
+          <img src={eCommBackendImage} alt="VS Code showing SQL models" className="project-image" />
+          </a>
+          <p>A practice blog for people to post facts about dogs, and comments about those facts</p>
+        </div>
+        <div className="project">
+          <a href="https://github.com/EvrettG/EmployeeTracker">
+          <h2>E-Commerce Backend</h2>
+          <img src={eCommBackendImage} alt="VS Code showing SQL models" className="project-image" />
+          </a>
+          <p>A commandline content management system (CMS) for tracking employees and other related details in a SQL database</p>
+        </div>
+        <div className="project">
           {/* <a href=""> */}
           <h2>Un-named Latest Project</h2>
           <img src={placeholderImage} alt="Placeholder for the latest project" className="project-image" />
